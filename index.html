@@ -5,70 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mansi's Custom STL Showcase</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      .glow {
+        text-shadow: 0 0 8px rgba(59, 130, 246, 0.5);
+      }
+    </style>
   </head>
-  <body class="bg-gradient-to-b from-blue-50 to-white text-gray-800 font-sans">
+  <body class="bg-gradient-to-br from-blue-50 via-white to-pink-50 text-gray-800">
     <!-- Hero Section -->
-    <header class="bg-white shadow-lg p-10 text-center border-b-4 border-blue-300">
-      <h1 class="text-5xl font-extrabold text-blue-700 tracking-tight">Custom STL Containers</h1>
-      <p class="mt-3 text-xl text-gray-600 italic">A Deep Dive into C++ with OOP & Red-Black Trees – by Mansi</p>
+    <header class="bg-white shadow-xl p-12 text-center border-b-8 border-blue-200">
+      <h1 class="text-6xl font-extrabold text-blue-700 tracking-tight glow">Custom STL Containers</h1>
+      <p class="mt-4 text-2xl text-gray-600 italic">Rebuilding the C++ Standard Library – From the Ground Up ✨</p>
     </header>
 
     <!-- Intro Section -->
-    <section class="p-8 max-w-5xl mx-auto">
-      <h2 class="text-3xl font-semibold mb-4 text-blue-600">🔍 What This Project Is About</h2>
-      <p class="mb-6 text-lg text-gray-700 leading-relaxed">
-        This project is a custom implementation of core C++ STL containers using Object-Oriented Programming principles.
-        It covers <strong>custom-built <code>vector</code>, <code>map</code>, <code>set</code>, <code>stack</code>, and <code>pair</code> classes</strong>, along with a complete <strong>Red-Black Tree</strong> to support balanced associative data structures.
-        You'll get an in-depth understanding of how these containers work under the hood.
+    <section class="p-10 max-w-6xl mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-6 text-blue-600">🚀 Project Overview</h2>
+      <p class="text-xl leading-relaxed text-gray-700">
+        This project is not just a clone—it's a reimagination of core C++ STL containers. <br>
+        Designed for education, performance insight, and deeper understanding, it covers <span class="font-semibold">custom-built</span>
+        <code class="bg-blue-100 px-2 py-1 rounded text-blue-700">vector</code>, <code class="bg-blue-100 px-2 py-1 rounded text-blue-700">map</code>,
+        <code class="bg-blue-100 px-2 py-1 rounded text-blue-700">set</code>, <code class="bg-blue-100 px-2 py-1 rounded text-blue-700">stack</code>, and more—
+        all built using low-level C++ with <span class="font-semibold">templates, OOP, and Red-Black Trees</span>.
       </p>
     </section>
 
     <!-- Features Section -->
-    <section class="bg-white p-8 max-w-5xl mx-auto rounded-2xl shadow-lg">
-      <h2 class="text-2xl font-bold mb-4 text-blue-600">✨ Key Highlights & Innovations</h2>
-      <ul class="list-disc list-inside text-gray-700 space-y-3 text-lg">
-        <li><strong>Custom Vector:</strong> Manual memory management, iterators, dynamic resizing using raw pointers.</li>
-        <li><strong>Custom Map:</strong> Implemented using a fully functional Red-Black Tree for key-value storage.</li>
-        <li><strong>Custom Set:</strong> Built on Red-Black Tree to manage unique sorted elements efficiently.</li>
-        <li><strong>Custom Stack:</strong> LIFO structure using linked list, with push/pop/top methods and O(1) operations.</li>
-        <li><strong>Custom Pair:</strong> Templated class to mimic `std::pair` supporting any two types.</li>
-        <li><strong>Red-Black Tree:</strong> Full logic with insertions, deletions, rotations, color flipping, and balancing rules.</li>
-        <li><strong>Templates:</strong> All containers are generic and support reusable type-safe code.</li>
-        <li><strong>Object-Oriented Programming:</strong> Classes, constructors, destructors, operator overloading, and encapsulation.</li>
-        <li><strong>Educational Goal:</strong> Learn STL internals and strengthen data structure & OOP understanding.</li>
-      </ul>
+    <section class="bg-white p-10 max-w-6xl mx-auto rounded-3xl shadow-2xl mt-10">
+      <h2 class="text-3xl font-bold mb-6 text-blue-600 text-center">💡 Key Highlights & Technical Superiority</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-lg text-gray-700">
+        <ul class="list-disc list-inside space-y-3">
+          <li><strong>🌱 Custom Vector:</strong> Built from raw pointers with manual memory handling, dynamic resizing, and iterator support.</li>
+          <li><strong>🧠 Manual Memory Management:</strong> Understand how capacity grows and memory is freed—unlike STL which abstracts this away.</li>
+          <li><strong>⚙️ Red-Black Tree:</strong> Fully implemented with insertions, deletions, rotations, and balancing without using built-in trees.</li>
+          <li><strong>🔑 Custom Map & Set:</strong> Both containers built using the Red-Black Tree to support associative structures with sorted order.</li>
+        </ul>
+        <ul class="list-disc list-inside space-y-3">
+          <li><strong>📦 Stack & Pair:</strong> Lightweight and efficient implementations mimicking STL behavior with custom logic.</li>
+          <li><strong>🧩 STL vs Custom:</strong> No allocator, no prebuilt headers. Every function, every structure, crafted by hand.</li>
+          <li><strong>🧵 Template Programming:</strong> Generic containers that work with all types, showing advanced C++ techniques.</li>
+          <li><strong>🎯 Debug-Oriented:</strong> Rich comments, modular file structure, and visual logs make this perfect for learning.</li>
+        </ul>
+      </div>
     </section>
 
-    <!-- Code Insights Section -->
-    <section class="p-8 max-w-5xl mx-auto">
-      <h2 class="text-2xl font-bold mb-4 text-blue-600">🧠 Behind the Code</h2>
-      <p class="mb-4 text-lg text-gray-700">
-        All data structures were written using only core C++ concepts without relying on built-in STL containers. Each file showcases deep insight into internal implementations.
-      </p>
-      <p class="mb-4 text-lg text-gray-700">
-        The Red-Black Tree manages balance via color rules and rotations. Vector mimics real capacity doubling and buffer copying. Set and map derive directly from the RBT structure. Stack operates as a clean linked list, and pair uses template specialization.
-      </p>
-      <p class="text-lg text-gray-700">
-        This project enhances your understanding of container behaviors, algorithmic complexity, and object design — making it ideal for learning, teaching, and showcasing skills in interviews or contributions.
-      </p>
+    <!-- Comparison Section -->
+    <section class="p-10 max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold mb-4 text-blue-600">🔍 Differences from Standard STL</h2>
+      <div class="bg-blue-50 border-l-4 border-blue-300 p-6 rounded-xl text-gray-800 text-lg">
+        <ul class="space-y-3 list-disc list-inside">
+          <li><strong>Transparency:</strong> Unlike STL, where implementation details are hidden, this project exposes every working mechanism.</li>
+          <li><strong>No Allocators:</strong> This project doesn’t use STL allocators, giving you full control over memory behavior.</li>
+          <li><strong>Educational Perspective:</strong> STL is for usage—this project is for <em>learning</em> how STL is designed from scratch.</li>
+          <li><strong>Code Ownership:</strong> Understand every line. Debug every flow. Own your container logic completely.</li>
+        </ul>
+      </div>
     </section>
 
-    <!-- Files Section -->
-    <section class="p-8 max-w-5xl mx-auto">
-      <h2 class="text-2xl font-bold mb-4 text-blue-600">📂 Download & Explore</h2>
+    <!-- Download Section -->
+    <section class="p-10 max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold mb-6 text-blue-600">📥 Explore the Source Code</h2>
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
-        <a href="vector.h" download class="bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white p-4 rounded-xl shadow-md text-center font-medium transition">Download <code>vector.h</code></a>
-        <a href="map.h" download class="bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white p-4 rounded-xl shadow-md text-center font-medium transition">Download <code>map.h</code></a>
-        <a href="rbtree.h" download class="bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white p-4 rounded-xl shadow-md text-center font-medium transition">Download <code>rbtree.h</code></a>
-        <a href="set.h" download class="bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white p-4 rounded-xl shadow-md text-center font-medium transition">Download <code>set.h</code></a>
-        <a href="stack.h" download class="bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white p-4 rounded-xl shadow-md text-center font-medium transition">Download <code>stack.h</code></a>
-        <a href="pair.h" download class="bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white p-4 rounded-xl shadow-md text-center font-medium transition">Download <code>pair.h</code></a>
+        <a href="vector.hpp" download class="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white p-4 rounded-xl shadow-lg text-center font-semibold">Download <code>vector.hpp</code></a>
+        <a href="map.hpp" download class="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white p-4 rounded-xl shadow-lg text-center font-semibold">Download <code>map.hpp</code></a>
+        <a href="RB_Tree.hpp" download class="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white p-4 rounded-xl shadow-lg text-center font-semibold">Download <code>RB_Tree.hpp</code></a>
+        <a href="set.hpp" download class="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white p-4 rounded-xl shadow-lg text-center font-semibold">Download <code>set.hpp</code></a>
+        <a href="stack.hpp" download class="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white p-4 rounded-xl shadow-lg text-center font-semibold">Download <code>stack.hpp</code></a>
+        <a href="pair.hpp" download class="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white p-4 rounded-xl shadow-lg text-center font-semibold">Download <code>pair.hpp</code></a>
       </div>
     </section>
 
     <!-- Footer -->
-    <footer class="text-center text-gray-500 mt-12 p-6 text-sm border-t">
-      Made with ❤️ by Mansi | <a href="https://github.com/YOUR_GITHUB" class="text-blue-500 hover:underline">GitHub</a>
+    <footer class="text-center text-gray-600 mt-16 p-6 text-sm border-t">
+      Made with 💙 by <span class="font-semibold">Mansi</span> | <a href="https://github.com/YOUR_GITHUB" target="_blank" class="text-blue-500 hover:underline">View on GitHub</a>
     </footer>
   </body>
 </html>
